@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1370.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.chess.application.ChessBoardController">
+   <left>
+      <Pane prefHeight="720.0" prefWidth="245.0" style="-fx-background-color: #EEEEFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="67.0" layoutY="28.0" text="Player 1" underline="true">
+               <font>
+                  <Font name="Algerian" size="24.0" />
+               </font>
+            </Label>
+            <Button focusTraversable="false" layoutX="71.0" layoutY="666.0" mnemonicParsing="false" onAction="#replayAction" prefHeight="40.0" prefWidth="100.0" text="Replay">
+               <font>
+                  <Font name="Algerian" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TilePane fx:id="blackOutTilePane" hgap="20.0" layoutX="31.0" layoutY="64.0" prefHeight="387.0" prefWidth="183.0" vgap="20.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </TilePane>
+         </children>
+      </Pane>
+   </left>
+   <right>
+      <Pane prefHeight="720.0" prefWidth="245.0" style="-fx-background-color: #EEEEFF;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="67.0" layoutY="28.0" text="Player 2" underline="true">
+               <font>
+                  <Font name="Algerian" size="24.0" />
+               </font>
+            </Label>
+            <Button focusTraversable="false" layoutX="73.0" layoutY="666.0" mnemonicParsing="false" onAction="#replayAction" prefHeight="40.0" prefWidth="100.0" text="Replay">
+               <font>
+                  <Font name="Algerian" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TilePane fx:id="whiteOutTilePane" hgap="20.0" layoutX="31.0" layoutY="63.0" prefHeight="387.0" prefWidth="183.0" vgap="20.0">
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </TilePane>
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <TilePane prefHeight="720.0" prefWidth="819.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="w00" onMouseClicked="#w00Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackRook1" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#blackRook1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackRook.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b01" onMouseClicked="#b01Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn1" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+               <TilePane.margin>
+                  <Insets />
+               </TilePane.margin>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></Pane>
+            <Pane fx:id="w02" onMouseClicked="#w02Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b03" onMouseClicked="#b03Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w04" onMouseClicked="#w04Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b05" onMouseClicked="#b05Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w06" onMouseClicked="#w06Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn1" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b07" onMouseClicked="#b07Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteRook1" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#whiteRook1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteRook.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b10" onMouseClicked="#b10Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackKnight1" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#blackKnight1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackKnight.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w11" onMouseClicked="#w11Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn2" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b12" onMouseClicked="#b12Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w13" onMouseClicked="#w13Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b14" onMouseClicked="#b14Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w15" onMouseClicked="#w15Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b16" onMouseClicked="#b16Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn2" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w17" onMouseClicked="#w17Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteKnight1" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#whiteKnight1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteKnight.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w20" onMouseClicked="#w20Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackBishop1" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#blackBishop1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackBishop.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b21" onMouseClicked="#b21Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn3" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn3Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w22" onMouseClicked="#w22Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b23" onMouseClicked="#b23Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w24" onMouseClicked="#w24Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b25" onMouseClicked="#b25Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w26" onMouseClicked="#w26Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn3" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn3Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b27" onMouseClicked="#b27Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteBishop1" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#whiteBishop1Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteBishop.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b30" onMouseClicked="#b30Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackCrown" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#blackCrownClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackCrown.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w31" onMouseClicked="#w31Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn4" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn4Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b32" onMouseClicked="#b32Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w33" onMouseClicked="#w33Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b34" onMouseClicked="#b34Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w35" onMouseClicked="#w35Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b36" onMouseClicked="#b36Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn4" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn4Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w37" onMouseClicked="#w37Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteCrown" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whiteCrownClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteCrown.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w40" onMouseClicked="#w40Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackKing" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#blackKingClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackKing.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b41" onMouseClicked="#b41Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn5" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn5Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w42" onMouseClicked="#w42Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b43" onMouseClicked="#b43Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w44" onMouseClicked="#w44Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b45" onMouseClicked="#b45Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w46" onMouseClicked="#w46Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn5" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn5Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b47" onMouseClicked="#b47Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteKing" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#whiteKingClick" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteKing.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b50" onMouseClicked="#b50Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackBishop2" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#blackBishop2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackBishop.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w51" onMouseClicked="#w51Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn6" fitHeight="57.0" fitWidth="42.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn6Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b52" onMouseClicked="#b52Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w53" onMouseClicked="#w53Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b54" onMouseClicked="#b54Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w55" onMouseClicked="#w55Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b56" onMouseClicked="#b56Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn6" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn6Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w57" onMouseClicked="#w57Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteBishop2" fitHeight="57.0" fitWidth="82.0" layoutX="42.0" layoutY="17.0" onMouseClicked="#whiteBishop2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteBishop.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w60" onMouseClicked="#w60Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackKnight2" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#blackKnight2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackKnight.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b61" onMouseClicked="#b61Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn7" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn7Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w62" onMouseClicked="#w62Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b63" onMouseClicked="#b63Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w64" onMouseClicked="#w64Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b65" onMouseClicked="#b65Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w66" onMouseClicked="#w66Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn7" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn7Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b67" onMouseClicked="#b67Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteKnight2" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#whiteKnight2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteKnight.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b70" onMouseClicked="#b70Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackRook2" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#blackRook2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackRook.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w71" onMouseClicked="#w71Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="blackPawn8" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#blackPawn8Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/blackPawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="b72" onMouseClicked="#b72Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w73" onMouseClicked="#w73Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b74" onMouseClicked="#b74Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="w75" onMouseClicked="#w75Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;" />
+            <Pane fx:id="b76" onMouseClicked="#b76Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #999999; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whitePawn8" fitHeight="57.0" fitWidth="82.0" layoutX="41.0" layoutY="17.0" onMouseClicked="#whitePawn8Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whitePawn.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+            <Pane fx:id="w77" onMouseClicked="#w77Click" prefHeight="90.0" prefWidth="110.0" style="-fx-background-color: #FFFFFF; -fx-border-color: #000000; -fx-border-width: 1;">
+               <children>
+                  <ImageView fx:id="whiteRook2" fitHeight="57.0" fitWidth="82.0" layoutX="39.0" layoutY="17.0" onMouseClicked="#whiteRook2Click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/whiteRook.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </TilePane>
+   </center>
+</BorderPane>
